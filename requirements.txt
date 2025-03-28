@@ -2,6 +2,6 @@ streamlit==1.28.0
 pandas==2.1.0
 plotly==5.17.0
 requests==2.31.0
-firecrawl==0.1.6
+firecrawl
 pydantic==2.4.2
 beautifulsoup4==4.12.2
