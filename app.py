@@ -150,16 +150,20 @@ def extract_focus_keyword(url):
                 {
                     'prompt': '''
                     You are an SEO keyword specialist. Analyze this page and identify:
-                    1. The primary focus keyword this page is targeting
-                    
+                    1. The primary focus keyword(s) this page is targeting
                     Base your analysis on:
-                    - Page title
-                    - Headings (H1, H2, etc.)
-                    - Content and keyword density
-                    - URL structure
-                    - Image alt tags (if available)
-                    
-                    Provide only the focus keyword and do not include any explanations.
+                    Page title
+                    Headings (H1, H2, etc.)
+                    Content and keyword density
+                    URL structure
+                    Image alt tags (if available)
+                    Rules for keyword extraction:
+                    Provide only the keyword(s), no explanations.
+                    If the keyword includes an extra element (e.g., brand name, collection name, or descriptor), list both the full phrase and a more generic version.
+                    For example, if the keyword is "Foraged collection handsoap tablet refills", extract:
+                    Handsoap tablet refills (seed keyword)
+                    Foraged collection handsoap
+                    Tablet refills
                     ''',
                     'schema': {
                         "type": "object",
@@ -376,3 +380,17 @@ The focus keyword is: {focus_keyword}
 
 if __name__ == "__main__":
     main()
+
+
+
+# You are an SEO keyword specialist. Analyze this page and identify:
+#                     1. The primary focus keyword this page is targeting
+                    
+#                     Base your analysis on:
+#                     - Page title
+#                     - Headings (H1, H2, etc.)
+#                     - Content and keyword density
+#                     - URL structure
+#                     - Image alt tags (if available)
+                    
+#                     Provide only the focus keyword and do not include any explanation
